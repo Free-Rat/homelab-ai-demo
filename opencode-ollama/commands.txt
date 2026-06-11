@@ -1,0 +1,10 @@
+# Set DEMO_BASE_URL to the raw URL that contains this directory.
+mkdir -p opencode-ollama-demo
+cd opencode-ollama-demo
+curl -fsSLO "$DEMO_BASE_URL/flake.nix"
+curl -fsSLO "$DEMO_BASE_URL/flake.lock"
+curl -fsSLO "$DEMO_BASE_URL/demo.sh"
+curl -fsSLO "$DEMO_BASE_URL/opencode.json"
+chmod +x demo.sh
+nix develop --command ./demo.sh --run
+nix develop --command ./demo.sh --opencode
