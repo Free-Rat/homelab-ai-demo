@@ -13,8 +13,8 @@ nix develop
 Download or convert a GGUF export of `google/gemma-4-E4B-it`, then place it at the default path:
 
 ```bash
-mkdir -p ../../models/gemma4-e4b
-cp /path/to/gemma-4-E4B-it-Q4_K_M.gguf ../../models/gemma4-e4b/
+mkdir -p ./models/gemma4-e4b
+cp /path/to/gemma-4-E4B-it-Q4_K_M.gguf ./models/gemma4-e4b/
 ```
 
 If the model is gated, authenticate first:
@@ -52,7 +52,7 @@ For a one-command check, run:
 
 ## Configuration
 
-- Default model path: `../../models/gemma4-e4b/gemma-4-E4B-it-Q4_K_M.gguf`
+- Default model path: `./models/gemma4-e4b/gemma-4-E4B-it-Q4_K_M.gguf`
 - Server URL: `http://127.0.0.1:8080`
 - OpenAI-compatible endpoint: `/v1/chat/completions`
 - Context size: `4096`

@@ -2,10 +2,9 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
 
 MODEL_PRESET="${LLAMA_MODEL_PRESET:-gemma}"
-GEMMA_MODEL_PATH="${GEMMA_MODEL_PATH:-$PROJECT_DIR/models/gemma4-e4b/gemma-4-E4B-it-Q4_K_M.gguf}"
+GEMMA_MODEL_PATH="${GEMMA_MODEL_PATH:-$SCRIPT_DIR/models/gemma4-e4b/gemma-4-E4B-it-Q4_K_M.gguf}"
 HOST="${LLAMA_SERVER_HOST:-0.0.0.0}"
 PORT="${LLAMA_SERVER_PORT:-8080}"
 CLIENT_BASE_URL="${LLAMA_SERVER_URL:-http://127.0.0.1:$PORT}"
